@@ -48,6 +48,7 @@ kjv can be built by cloning the repository and then running make:
     git clone https://github.com/layeh/kjv.git
     cd kjv
     make
+    sudo make install
 
 ## License
 

@@ -8,6 +8,10 @@ OBJS = src/kjv_main.o \
 CFLAGS += -Wall -Isrc/
 LDLIBS += -lreadline
 
+prefix = /usr/local
+exec_prefix = $(prefix)
+bindir = $(exec_prefix)/bin
+
 kjv: $(OBJS)
 	$(CC) -o $@ $(LDFLAGS) $(OBJS) $(LDLIBS)
 
@@ -28,6 +32,12 @@ data/kjv_data.o: src/kjv_data.h data/kjv_data.c
 data/kjv_data.c: data/kjv.tsv data/generate.awk src/kjv_data.h
 	awk -f data/generate.awk $< > $@
 
-.PHONY: clean
+.PHONY: clean install uninstall
 clean:
 	rm -rf $(OBJS) kjv
+
+install:
+	install kjv $(bindir)/kjv
+
+uninstall:
+	rm -rf $(bindir)/kjv
