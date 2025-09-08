@@ -1,12 +1,12 @@
-<a href="https://thepreservedbible.com/" title="Why the King James Bible?"><img src="https://i.ibb.co/svCrDys/The-Preserved-Bible-Small.jpg" width="300" align="right"></a>
+<a href="https://bereanbible.com/" title="Berean Standard Bible"><img src="bsb-logo.png" width="300" align="right"></a>
 
-# kjv
+# bsb
 
 Read the Word of God from your terminal
 
 ## Usage
 
-    usage: kjv [flags] [reference...]
+    usage: bsb [flags] [reference...]
 
     Flags:
       -A num  show num verses of context after matching verses
@@ -43,13 +43,20 @@ Read the Word of God from your terminal
 
 ## Build
 
-kjv can be built by cloning the repository and then running make:
+bsb can be built by cloning the repository and then running make:
 
-    git clone https://github.com/layeh/kjv.git
-    cd kjv
+    git clone https://github.com/theJoshMuller/bsb.git
+    cd bsb
     make
     sudo make install
 
 ## License
 
 Public domain
+
+## Acknowledgements
+
+This project is a fork of [layeh/kjv](https://github.com/layeh/kjv) by [layeh](https://github.com/layeh). 
+The original KJV Bible tool can be found at https://github.com/layeh/kjv.
+
+This BSB version was created by [theJoshMuller](https://github.com/theJoshMuller).
